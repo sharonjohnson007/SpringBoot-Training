@@ -1,5 +1,6 @@
 package com.management.project.springbootrestapi.repository;
 
+<<<<<<< HEAD
 import com.management.project.springbootrestapi.controller.EmployeeController;
 import com.management.project.springbootrestapi.model.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -25,4 +26,11 @@ public interface EmployeeRepository extends PagingAndSortingRepository<Employee,
   // Employee findById(long id);
 
    void deleteById(long id);
+=======
+import com.management.project.springbootrestapi.model.Employee;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+
+public interface EmployeeRepository extends JpaRepository<Employee, Long> {
+>>>>>>> 72b76b2bcb8886c97e9b878ddb333d2e403e3713
 }

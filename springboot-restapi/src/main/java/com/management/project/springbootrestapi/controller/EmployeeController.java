@@ -13,8 +13,18 @@ public class EmployeeController {
     EmployeeService employeeService;
 
     @RequestMapping("/employee")
+<<<<<<< HEAD
     public List<Employee> list( @RequestParam Integer pageNumber,@RequestParam Integer pageSize) {
         return employeeService.listAllEmployee(pageNumber, pageSize);
+=======
+    public List<Employee> list() {
+        return employeeService.listAllEmployee();
+    }
+
+    @GetMapping("/employee/{id}")
+    public Employee get(@PathVariable Long id) {
+        return employeeService.getEmployee(id);
+>>>>>>> 72b76b2bcb8886c97e9b878ddb333d2e403e3713
     }
 
     @PostMapping("/addEmployee")
@@ -31,6 +41,7 @@ public class EmployeeController {
     public void delete(@PathVariable Integer id) {
         employeeService.deleteEmployee(id);
     }
+<<<<<<< HEAD
     @GetMapping("/employee/filterByStatus")
     public List<Employee> getByStatus( @RequestParam String status){
         return employeeService.getEmployeeByStatus(status);
@@ -47,4 +58,6 @@ public class EmployeeController {
     public List<Employee> getByNameDsc(){
         return employeeService.sortEmployeeByNameDsc();
     }
+=======
+>>>>>>> 72b76b2bcb8886c97e9b878ddb333d2e403e3713
 }
