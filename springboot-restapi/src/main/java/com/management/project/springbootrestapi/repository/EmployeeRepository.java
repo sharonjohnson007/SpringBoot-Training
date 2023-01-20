@@ -1,6 +1,5 @@
 package com.management.project.springbootrestapi.repository;
 
-<<<<<<< HEAD
 import com.management.project.springbootrestapi.controller.EmployeeController;
 import com.management.project.springbootrestapi.model.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -12,25 +11,21 @@ import java.util.List;
 
 
 public interface EmployeeRepository extends PagingAndSortingRepository<Employee, Long> {
-   List<Employee> findByStatus(String status);
-   //Error in query -pending 
-   @Query(value ="FROM Employee ORDER BY NAME ASC",nativeQuery = true)
-   List<Employee> sortByNameASC();
-   @Query(value ="FROM Employee ORDER BY NAME DSC",nativeQuery = true)
-   List<Employee> sortByNameDSC();
+    List<Employee> findByStatus(String status);
 
-   void save(Employee employee);
+    @Query(value = "FROM Employee ORDER BY NAME ASC", nativeQuery = true)
+    List<Employee> sortByNameASC();
 
-   Employee findById(long id);
+    @Query(value = "FROM Employee ORDER BY NAME DSC", nativeQuery = true)
+    List<Employee> sortByNameDSC();
 
-  // Employee findById(long id);
+    void save(Employee employee);
 
-   void deleteById(long id);
-=======
-import com.management.project.springbootrestapi.model.Employee;
-import org.springframework.data.jpa.repository.JpaRepository;
+    Employee findById(long id);
 
+    void deleteById(long id);
 
-public interface EmployeeRepository extends JpaRepository<Employee, Long> {
->>>>>>> 72b76b2bcb8886c97e9b878ddb333d2e403e3713
 }
+
+
+

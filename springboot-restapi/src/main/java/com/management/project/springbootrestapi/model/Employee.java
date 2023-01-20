@@ -13,45 +13,28 @@ public class Employee {
     private String mobileNumber;
     private String email;
     private String salary;
-<<<<<<< HEAD
     private String status;
 
-    public Employee(){
-
-    }
-
-    public Employee(Long id, String name, String dateOfBirth, String mobileNumber, String email, String salary, String status) {
-=======
-
     public Employee() {
+
     }
 
     public Employee(long id, String name, String dateOfBirth, String mobileNumber, String email, String salary) {
->>>>>>> 72b76b2bcb8886c97e9b878ddb333d2e403e3713
         this.id = id;
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.mobileNumber = mobileNumber;
         this.email = email;
         this.salary = salary;
-<<<<<<< HEAD
         this.status = status;
     }
 
-    public Long getId(long id) {
-        return this.id;
-    }
-
-    public void setId(Long id) {
-=======
-    }
 
     public long getId() {
         return id;
     }
 
     public void setId(long id) {
->>>>>>> 72b76b2bcb8886c97e9b878ddb333d2e403e3713
         this.id = id;
     }
 
@@ -95,7 +78,6 @@ public class Employee {
         this.salary = salary;
     }
 
-<<<<<<< HEAD
     public String getStatus() {
         return status;
     }
@@ -104,8 +86,6 @@ public class Employee {
         this.status = status;
     }
 
-=======
->>>>>>> 72b76b2bcb8886c97e9b878ddb333d2e403e3713
     @Override
     public String toString() {
         return "Employee{" +
@@ -115,13 +95,10 @@ public class Employee {
                 ", mobileNumber='" + mobileNumber + '\'' +
                 ", email='" + email + '\'' +
                 ", salary='" + salary + '\'' +
-<<<<<<< HEAD
                 ", status='" + status + '\'' +
                 '}';
     }
 }
-=======
-                '}';
-    }
-}
->>>>>>> 72b76b2bcb8886c97e9b878ddb333d2e403e3713
+
+
+
