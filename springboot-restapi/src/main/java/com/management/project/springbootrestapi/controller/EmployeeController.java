@@ -51,6 +51,15 @@ public class EmployeeController {
     public List<Employee> getByNameDsc() {
         return employeeService.sortEmployeeByNameDsc();
     }
+    @GetMapping("/employee/sortByIdAsc")
+    public List<Employee> getByIdAsc() {
+        return employeeService.sortEmployeeByIdAsc();
+    }
+
+    @GetMapping("/employee/sortByIdDsc")
+    public List<Employee> getByIdDsc() {
+        return employeeService.sortEmployeeByIdDsc();
+    }
 }
 
 

@@ -13,11 +13,17 @@ import java.util.List;
 public interface EmployeeRepository extends PagingAndSortingRepository<Employee, Long> {
     List<Employee> findByStatus(String status);
 
-    @Query(value = "FROM Employee ORDER BY NAME ASC", nativeQuery = true)
-    List<Employee> sortByNameASC();
+    @Query(value = "select * from Employee e order by e.id ASC ", nativeQuery = true)
+    List<Employee> sortByIdByASC();
 
-    @Query(value = "FROM Employee ORDER BY NAME DSC", nativeQuery = true)
-    List<Employee> sortByNameDSC();
+    @Query(value = "select * FROM Employee e order BY e.id DESC", nativeQuery = true)
+    List<Employee> sortByIdByDSC();
+
+    @Query(value = "select * from Employee e order by e.name ASC ", nativeQuery = true)
+    List<Employee> sortByNameByASC();
+
+    @Query(value = "select * FROM Employee e order BY e.name DESC", nativeQuery = true)
+    List<Employee> sortByNameByDSC();
 
     void save(Employee employee);
 

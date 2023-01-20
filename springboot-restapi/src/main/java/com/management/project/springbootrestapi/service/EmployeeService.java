@@ -30,10 +30,7 @@ public class EmployeeService {
     }
 
     public Employee getEmployee(long id) {
-
         return employeeRepository.findById(id);
-
-        // return employeeRepository.findById(id).get();
     }
 
     public void deleteEmployee(long id) {
@@ -45,10 +42,18 @@ public class EmployeeService {
     }
 
     public List<Employee> sortEmployeeByNameAsc() {
-        return employeeRepository.sortByNameASC();
+        return employeeRepository.sortByNameByASC();
     }
 
     public List<Employee> sortEmployeeByNameDsc() {
-        return employeeRepository.sortByNameDSC();
+        return employeeRepository.sortByNameByDSC();
+    }
+
+    public List<Employee> sortEmployeeByIdAsc() {
+        return employeeRepository.sortByIdByASC();
+    }
+
+    public List<Employee> sortEmployeeByIdDsc() {
+        return employeeRepository.sortByIdByDSC();
     }
 }
